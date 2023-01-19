@@ -28,6 +28,7 @@ router.get("/:id", async (req, res) => {
       include: [{ model: Product }],
     });
     res.status(200).json(tagData);
+    //200 response code is good, 500 response code is bad -- server error
   } catch (err) {
     res.status(500).json(err);
   }
@@ -38,7 +39,7 @@ router.post("/", async (req, res) => {
     const newTag = await Tag.create({
       tag_name: req.body.tag_name,
     });
-    res.status(201).json(newTag);
+    res.status(200).json(newTag);
   } catch (err) {
     res.status(500).json(err);
   }
