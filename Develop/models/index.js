@@ -1,4 +1,4 @@
-// import models
+// import models MOST OF THIS WORKS BUT getting null values when doing my source filename command 
 const Product = require("./Product");
 const Category = require("./Category");
 const Tag = require("./Tag");
